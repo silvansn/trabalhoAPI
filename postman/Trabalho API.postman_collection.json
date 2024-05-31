@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "c97fac1b-f1c1-4175-90b3-70b6c9075b3f",
+		"name": "Trabalho API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25668838"
+	},
+	"item": [
+		{
+			"name": "Autenticação",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8iLCJpYXQiOjE3MTcxNzI1MjMsImV4cCI6MTcxNzE3NjEyM30.dzPVqIGVqHNnAywAqFWq2aEeF9WWIyZKJmM6ya-1eo8",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"usuario\",\r\n  \"password\": \"senha\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar todos os clientes",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8iLCJpYXQiOjE3MTcxNTg4MjYsImV4cCI6MTcxNzE2MjQyNn0.QzMlSFgu-UxBTyN26jaZyQop5Bc40ZT_gQ_HxYnovWE",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Cliente",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8iLCJpYXQiOjE3MTcxNTg4MjYsImV4cCI6MTcxNzE2MjQyNn0.QzMlSFgu-UxBTyN26jaZyQop5Bc40ZT_gQ_HxYnovWE",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 4,\r\n  \"codigo\": \"1004\",\r\n  \"nome\": \"Alexandro\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Cliente",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8iLCJpYXQiOjE3MTcxNTg4MjYsImV4cCI6MTcxNzE2MjQyNn0.QzMlSFgu-UxBTyN26jaZyQop5Bc40ZT_gQ_HxYnovWE",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cliente/1004",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cliente",
+						"1004"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Cliente/Endereço",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8iLCJpYXQiOjE3MTcxNTg4MjYsImV4cCI6MTcxNzE2MjQyNn0.QzMlSFgu-UxBTyN26jaZyQop5Bc40ZT_gQ_HxYnovWE",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cliente/1004/endereco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cliente",
+						"1004",
+						"endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar endereço",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8iLCJpYXQiOjE3MTcxNTg4MjYsImV4cCI6MTcxNzE2MjQyNn0.QzMlSFgu-UxBTyN26jaZyQop5Bc40ZT_gQ_HxYnovWE",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"indice\": 4,\r\n  \"logradouro\": \"Rua Voluntario\",\r\n  \"numero\": \"362\",\r\n  \"complemento\": \"Apto 12C\",\r\n  \"cidade\": \"São Paulo\",\r\n  \"estado\": \"SP\",\r\n  \"cep\": \"02855-110\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/cliente/1004/endereco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"cliente",
+						"1004",
+						"endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar cliente via Gateway (Kong)",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzdWFyaW8iLCJpYXQiOjE3MTcxNzI1MjMsImV4cCI6MTcxNzE3NjEyM30.dzPVqIGVqHNnAywAqFWq2aEeF9WWIyZKJmM6ya-1eo8",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"3456\",\n    \"codigo\": \"1005\",\n    \"nome\": \"Rodrigo\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar  serviço: Endereço  (Kong)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//  check the HTTP return code",
+							"tests[ \"HTTP retornou 201 Created\" ] = responseCode.code === 201;",
+							"",
+							"//  Parse the service ID from the response",
+							"var jsonData = JSON.parse( responseBody );",
+							"",
+							"postman.setGlobalVariable( 'service-id', jsonData.id );",
+							"postman.setGlobalVariable( 'service-name', jsonData.name );",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Clientes\",\n    \"url\": \"http://192.168.15.175:8080/api/v1/cliente\",\n    \"enabled\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/services",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar  serviço: Cliente  (Kong)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//  check the HTTP return code",
+							"tests[ \"HTTP retornou 201 Created\" ] = responseCode.code === 201;",
+							"",
+							"//  Parse the service ID from the response",
+							"var jsonData = JSON.parse( responseBody );",
+							"",
+							"postman.setGlobalVariable( 'service-id', jsonData.id );",
+							"postman.setGlobalVariable( 'service-name', jsonData.name );",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Clientes\",\n    \"url\": \"http://192.168.15.175:8080/api/v1/cliente\",\n    \"enabled\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/services",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar serviço pelo ID  (Kong)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001/services/{{service-id}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"services",
+						"{{service-id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Status do Gateway  (Kong)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001",
+					"host": [
+						"localhost"
+					],
+					"port": "8001"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir  serviço: Cliente  (Kong)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001/services/{{service-name}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"services",
+						"{{service-name}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir  serviço: Endereço  (Kong)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8001/services/{{service-name}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"services",
+						"{{service-name}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar  rota: Endereço  (Kong)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"endereco\",\n    \"protocols\": [\"http\", \"https\"],\n    \"methods\": [\"GET\", \"POST\", \"PATCH\", \"DELETE\"],\n    \"hosts\": [\"localhost\"],\n    \"paths\": [\"/v1/gateway/endereco\"],\n    \"https_redirect_status_code\": 426,\n    \"regex_priority\": 0,\n    \"strip_path\": true,\n    \"path_handling\": \"v1\",\n    \"preserve_host\": false,\n    \"request_buffering\": true,\n    \"response_buffering\": true,\n    \"tags\": [\"user-level\", \"low-priority\"],\n    \"service\": {\"id\":\"{{service-id}}\"}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/routes",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir  rota: Cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"produto\",\n    \"protocols\": [\"http\", \"https\"],\n    \"methods\": [\"GET\", \"POST\", \"PATCH\", \"DELETE\"],\n    \"hosts\": [\"localhost\"],\n    \"paths\": [\"/v1/gateway/produto\"],\n    \"https_redirect_status_code\": 426,\n    \"regex_priority\": 0,\n    \"strip_path\": true,\n    \"path_handling\": \"v1\",\n    \"preserve_host\": false,\n    \"request_buffering\": true,\n    \"response_buffering\": true,\n    \"tags\": [\"user-level\", \"low-priority\"],\n    \"service\": {\"id\":\"b597608c-2f3f-430a-9c1d-36b3659010f8\"}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/routes/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"routes",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
